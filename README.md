@@ -20,6 +20,7 @@ Presentations using the **reveal.js** framework and hosted on GitHub pages meet 
 * the latest controlsLayout feature is not working 
 * the option `center` does only work when provided as a Pandoc variable
 * there seems to be no way to get rid of the default title page
-
+* need to enable GitHub pages for `master`
+* where to put the handouts?
 
 
