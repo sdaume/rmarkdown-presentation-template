@@ -1,0 +1,9 @@
+---
+title: "RMarkdown Presentation Template"
+title: "Your Presentation Title"
+author: "Your Name"
+date: "10 March 2018"
+theme: white
+highlight: zenburn
+transition: slide
+---
