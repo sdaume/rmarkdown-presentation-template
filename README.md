@@ -70,7 +70,7 @@ The command specifies the target template (`-t revealjs`), the output file (`-o 
 
 
 
-## Advanced usage
+## Advanced options
 ### Customized Pandoc template
 This repo contains a custom Pandoc reveal.js template in order to enable support for more recent features in the reveal.js framework. In order to use this custom template run the following command relative to the directory where the presentation is located:
 
@@ -78,8 +78,20 @@ This repo contains a custom Pandoc reveal.js template in order to enable support
 pandoc -t revealjs --template=./custom_pandoc_template/default.revealjs -s -o index.html index.md index_metadata.yaml -V revealjs-url=./reveal.js-3.6.0 
 ```
 
+### Syntax highlighting in code blocks
+Reveal.js comes packaged with a default code highlighting style `zenburn`. In order for code highlighting with [highlight.js](https://highlightjs.org/) to work, the custom Pandoc template has to be used and Pandoc's own highlighting has to be disabled (`--no-highlight`). This can be accomplished with the following command:
+
+```
+pandoc -t revealjs --template=./custom_pandoc_template/default.revealjs -s -o index.html index.md index_metadata.yaml -V revealjs-url=./reveal.js-3.6.0 --no-highlight -V highlighting-css=rainbow
+```
+
+This ensures that Pandoc does not parse and markup the code block. The modifications in the custom Pandoc template trigger the highlight.js library to be loaded and initialised. If the language for code block has not been provided, highlight.js will try to determine it automatically. See examples in the included slides.
+
+Consult [highlight.js](https://highlightjs.org/) for the available styles and supported languages. [highlight.js](https://highlightjs.org/) offers downloads of customized packs. One of those has been inlcuded here which provides support for "common" languages as well as `R`, `YAML` and `Tex`.
+
+
 ### Use `controlsLayout` option
-The [reveal.js v3.6.0](https://github.com/hakimel/reveal.js/releases/tag/3.6.0) added support for the `controlsLayout` option, which allows to display navigation arrows on the edges. This option seems to work only when provided as an argument to `pandoc` command. Use:
+The [reveal.js v3.6.0](https://github.com/hakimel/reveal.js/releases/tag/3.6.0) added support for the `controlsLayout` option, which allows to display navigation arrows on the edges. This option seems to work only when provided as an argument to the `pandoc` command. Use:
 
 ```
 pandoc -t revealjs --template=./custom_pandoc_template/default.revealjs -s -o index.html index.md index_metadata.yaml -V revealjs-url=./reveal.js-3.6.0 -V controlsLayout='edges'
