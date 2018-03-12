@@ -1,14 +1,15 @@
+# README
 This repository provides a template for browser-based presentations that are built from [RMarkdown](https://rmarkdown.rstudio.com) documents and utilizes the [reveal.js](https://revealjs.com) presentation framework for the generated presentation. [Pandoc](http://pandoc.org) is used to built the final presentation. The [highlight.js](https://highlightjs.org) framework is employed to provide syntax highlighting.
 
 Feel free to fork this repo and use it for your own presentations. Don't forget to **observe the licenses of the used tools and libraries** and **give credit** - ideally both in your [README](#credits---used-tools-and-licenses) and the presentation itself.
 
 
-# Table of contents
+## Table of contents
 ***Coming SOON!***
 
 
 
-# Background and motivation
+## Background and motivation
 The objectives for this template are to:
 
 * provide a reusable template to deliver high-quality presentations
@@ -24,12 +25,12 @@ The objectives for this template are to:
 Presentations using the **reveal.js** framework and hosted on GitHub pages meet all of these requirements. In order to utilise the latest reveal.js features a workflow using [Pandoc](http://pandoc.org) directly has been chosen over the [revealjs_rpackage](https://github.com/rstudio/revealjs). 
 
 
-# Quick start
+## Quick start
 ***Coming SOON!***
 
 
-# Basic usage
-## Artifacts and workflow
+## Basic usage
+### Artifacts and workflow
 
 **index.Rmd** is a [`RMarkdown`](https://rmarkdown.rstudio.com) file representing the presentation source. Consult the RMarkdown documentation for the available markdown syntax.  This file could be named differently, but using `index` allows to share a shorter URL when publishing the presentation via GitHub pages.
 The file contains a minimal `YAML` header to drive the transformation to a  `markdown` file. The specified target `markdown` format is  [full Pandoc markdown](https://rmarkdown.rstudio.com/markdown_document_format.html). 
@@ -69,31 +70,30 @@ The command specifies the target template (`-t revealjs`), the output file (`-o 
 
 
 
-# Advanced usage
-## Customized Pandoc template
+## Advanced usage
+### Customized Pandoc template
 This repo contains a custom Pandoc reveal.js template in order to enable support for more recent features in the reveal.js framework. In order to use this custom template run the following command relative to the directory where the presentation is located:
 
 ```
 pandoc -t revealjs --template=./custom_pandoc_template/default.revealjs -s -o index.html index.md index_metadata.yaml -V revealjs-url=./reveal.js-3.6.0 
 ```
 
-## Use `controlsLayout` option
+### Use `controlsLayout` option
 The [reveal.js v3.6.0](https://github.com/hakimel/reveal.js/releases/tag/3.6.0) added support for the `controlsLayout` option, which allows to display navigation arrows on the edges. This option seems to work only when provided as an argument to `pandoc` command. Use:
 
 ```
 pandoc -t revealjs --template=./custom_pandoc_template/default.revealjs -s -o index.html index.md index_metadata.yaml -V revealjs-url=./reveal.js-3.6.0 -V controlsLayout='edges'
 ```
 
-# Credits - Used tools and licenses
-***Coming SOON!***
-
-
-# Known issues
+## Known issues
 * center option does not work from YAML; the option `center` does only work when provided as a Pandoc variable
 * controlsLayout does not work at all
 
 
-# Miscellaneous resources
+## Miscellaneous resources
 
+
+## Credits - Used tools and licenses
+***Coming SOON!***
 
 
