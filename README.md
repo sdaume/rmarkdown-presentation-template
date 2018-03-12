@@ -59,7 +59,7 @@ transition: none
 ---
 ```
 
-When the presentation source has been `knitr`ed to plain markdown, Pandoc has to be run from the command line to generate the final presentation. This command has been tested with Pandoc 2.1.2 and is run relative to the directory where the resources are located:
+When the presentation source has been `knitr`ed to plain markdown, Pandoc has to be run from the command line to generate the final presentation. This command has been tested with Pandoc 2.1.2 and is run relative to the directory where the presentation is located:
 
 ```
 pandoc -t revealjs -s -o index.html index.md index_metadata.yaml -V revealjs-url=./reveal.js-3.6.0
@@ -70,7 +70,19 @@ The command specifies the target template (`-t revealjs`), the output file (`-o 
 
 
 # Advanced usage
-***Coming SOON!***
+## Customized Pandoc template
+This repo contains a custom Pandoc reveal.js template in order to enable support for more recent features in the reveal.js framework. In order to use this custom template run the following command relative to the directory where the presentation is located:
+
+```
+pandoc -t revealjs --template=./custom_pandoc_template/default.revealjs -s -o index.html index.md index_metadata.yaml -V revealjs-url=./reveal.js-3.6.0 
+```
+
+## Use `controlsLayout` option
+The [reveal.js v3.6.0](https://github.com/hakimel/reveal.js/releases/tag/3.6.0) added support for the `controlsLayout` option, which allows to display navigation arrows on the edges. This option seems to work only when provided as an argument to `pandoc` command. Use:
+
+```
+pandoc -t revealjs --template=./custom_pandoc_template/default.revealjs -s -o index.html index.md index_metadata.yaml -V revealjs-url=./reveal.js-3.6.0 -V controlsLayout='edges'
+```
 
 # Credits - Used tools and licenses
 ***Coming SOON!***
