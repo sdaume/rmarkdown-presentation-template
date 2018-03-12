@@ -27,9 +27,9 @@ $if(quotes)$
 $endif$
   </style>
 $if(highlighting-css)$
-  <style type="text/css">
-$highlighting-css$
-  </style>
+  <link rel="stylesheet" href="./custom_highlight.js-9.12.0/styles/$highlighting-css$.css">
+  <script src="./custom_highlight.js-9.12.0/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
 $endif$
 $if(theme)$
   <link rel="stylesheet" href="$revealjs-url$/css/theme/$theme$.css" id="theme">
