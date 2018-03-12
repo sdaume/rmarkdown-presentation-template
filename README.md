@@ -1,6 +1,14 @@
-# Background
-This repository provides a template for browser-based presentations that are built from [RMarkdown](https://rmarkdown.rstudio.com) documents and utilizes the [reveal.js](https://revealjs.com) presentation framework for the generated presentation. 
+This repository provides a template for browser-based presentations that are built from [RMarkdown](https://rmarkdown.rstudio.com) documents and utilizes the [reveal.js](https://revealjs.com) presentation framework for the generated presentation. [Pandoc](http://pandoc.org) is used to built the final presentation. The [highlight.js](https://highlightjs.org) framework is employed to provide syntax highlighting.
 
+Feel free to fork this repo and use it for your own presentations. Don't forget to **observe the licenses of the used tools and libraries** and **give credit** - ideally both in your [README](#credits---used-tools-and-licenses) and the presentation itself.
+
+
+# Table of contents
+***Coming SOON!***
+
+
+
+# Background and motivation
 The objectives for this template are to:
 
 * provide a reusable template to deliver high-quality presentations
@@ -16,7 +24,12 @@ The objectives for this template are to:
 Presentations using the **reveal.js** framework and hosted on GitHub pages meet all of these requirements. In order to utilise the latest reveal.js features a workflow using [Pandoc](http://pandoc.org) directly has been chosen over the [revealjs_rpackage](https://github.com/rstudio/revealjs). 
 
 
-# Artifacts and workflow
+# Quick start
+***Coming SOON!***
+
+
+# Basic usage
+## Artifacts and workflow
 
 **index.Rmd** is a [`RMarkdown`](https://rmarkdown.rstudio.com) file representing the presentation source. Consult the RMarkdown documentation for the available markdown syntax.  This file could be named differently, but using `index` allows to share a shorter URL when publishing the presentation via GitHub pages.
 The file contains a minimal `YAML` header to drive the transformation to a  `markdown` file. The specified target `markdown` format is  [full Pandoc markdown](https://rmarkdown.rstudio.com/markdown_document_format.html). 
@@ -33,7 +46,7 @@ title: "Your Presentation Title"
 ---
 ```
 
-A YAML file with common variables that add more presentation information and picks a `theme` (default is *black*), a code highlight style (default is *zenburn*) and `transition` mode (default is *zenburn*) for the slides may look like this:
+A YAML file with common variables that add more presentation information and picks a `theme` (default is *black*), a code highlight style (default is *zenburn*) and `transition` mode (default is *slide*) for the slides may look like this:
 
 ```
 ---
@@ -42,7 +55,7 @@ author: "Your Name"
 date: "10 March 2018"
 theme: white
 highlight: zenburn
-transition: slide
+transition: none
 ---
 ```
 
@@ -56,8 +69,19 @@ The command specifies the target template (`-t revealjs`), the output file (`-o 
 
 
 
+# Advanced usage
+***Coming SOON!***
+
+# Credits - Used tools and licenses
+***Coming SOON!***
+
+
 # Known issues
 * center option does not work from YAML; the option `center` does only work when provided as a Pandoc variable
 * controlsLayout does not work at all
+
+
+# Miscellaneous resources
+
 
 

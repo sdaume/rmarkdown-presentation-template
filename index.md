@@ -1,10 +1,31 @@
+Presenter mode
+--------------
+
+Speaker notes can be added like this to any section:
+
+``` {.markup}
+<aside class="notes">
+* These are some *presenter notes*.
+* You can use `markdown` in those notes as well.
+* Courtesy of the [reveal.js](https://revealjs.com/) framework.
+</aside>
+```
+
+Press `S` to bring up a window in presenter mode.
+
+<aside class="notes">
+-   These are some *presenter notes*.
+-   You can use `markdown` in those notes as well.
+-   Courtesy of the [reveal.js](https://revealjs.com/) framework.
+
+</aside>
 In the morning
 ==============
 
 Getting up
 ----------
 
--   Turn off alarm
+-   Turn **off** alarm
 -   Get out of bed
 
 Breakfast
