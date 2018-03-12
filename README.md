@@ -77,7 +77,12 @@ This repo contains a custom Pandoc reveal.js template in order to enable support
 pandoc -t revealjs --template=./custom_pandoc_template/default.revealjs -s -o index.html index.md index_metadata.yaml -V revealjs-url=./reveal.js-3.6.0 
 ```
 
+## Use `controlsLayout` option
+The [reveal.js v3.6.0](https://github.com/hakimel/reveal.js/releases/tag/3.6.0) added support for the `controlsLayout` option, which allows to display navigation arrows on the edges. This option seems to work only when provided as an argument to `pandoc` command. Use:
 
+```
+pandoc -t revealjs --template=./custom_pandoc_template/default.revealjs -s -o index.html index.md index_metadata.yaml -V revealjs-url=./reveal.js-3.6.0 -V controlsLayout='edges'
+```
 
 # Credits - Used tools and licenses
 ***Coming SOON!***

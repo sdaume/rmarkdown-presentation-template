@@ -4,7 +4,7 @@ The Pandoc license details which must be applied to this modified template can b
 
 
 # Customizations in this template
-* ...
+* Add support for the `controlsLayout` option added in [reveal.js v3.6.0](https://github.com/hakimel/reveal.js/releases/tag/3.6.0)
 
 
 # Credits and original License 
