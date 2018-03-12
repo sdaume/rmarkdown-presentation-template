@@ -1,7 +1,7 @@
 # README
 This repository provides a template for browser-based presentations that are built from [RMarkdown](https://rmarkdown.rstudio.com) documents and utilizes the [reveal.js](https://revealjs.com) presentation framework for the generated presentation. [Pandoc](http://pandoc.org) is used to built the final presentation. The [highlight.js](https://highlightjs.org) framework is employed to provide syntax highlighting.
 
-Feel free to fork this repo and use it for your own presentations. Don't forget to **observe the licenses of the used tools and libraries** and **give credit** - ideally both in your [README](#credits---used-tools-and-licenses) and the presentation itself.
+Feel free to fork this repo and use it for your own presentations. Don't forget to **observe the licenses of the used tools and libraries** and **give credit** - ideally both in your [README](#licenses) and the presentation itself.
 
 
 ## Table of contents
@@ -99,13 +99,21 @@ pandoc -t revealjs --template=./custom_pandoc_template/default.revealjs -s -o in
 
 ## Known issues
 * center option does not work from YAML; the option `center` does only work when provided as a Pandoc variable
-* controlsLayout does not work at all
 
 
 ## Miscellaneous resources
 
 
-## Credits - Used tools and licenses
-***Coming SOON!***
+## Licenses
+Unless when noted otherwise, the contents of this repository are licensed under a *CC0 1.0* public domain license. Consider attributing by linking to https://github.com/sdaume/rmarkdown-presentation-template. 
+
+This repo utilises and/or includes components from the [reveal.js](https://revealjs.com/), [Pandoc](https://pandoc.org/) and [highlight.js](https://highlightjs.org) frameworks. The following licenses apply:
+
+* **reveal.js** is [released](https://github.com/hakimel/reveal.js) under this [MIT license](https://github.com/hakimel/reveal.js/blob/master/LICENSE).
+* **Pandoc** is [released](https://github.com/jgm/pandoc) under this [GPLv2 license](https://github.com/jgm/pandoc/blob/master/COPYRIGHT)
+* **Pandoc templates** are [released](https://github.com/jgm/pandoc/tree/master/data/templates) under this dual [GPLv2 and BSD3 license](https://github.com/jgm/pandoc/blob/master/data/templates/README.markdown). 
+* **highlight.js** is [released](https://github.com/isagalaev/highlight.js) under this [BSD license](https://github.com/isagalaev/highlight.js/blob/master/LICENSE). **NOTE** that highlight.js [offers customized downloads](https://highlightjs.org/download/) with support for selected languages, the pack chosen for this presentation template includes support for "common" languages as well as `R`, `YAML` and `Tex`.
+
+Make sure to credit these libraries and provide references to the applicable licenses when forking this repository.
 
 
