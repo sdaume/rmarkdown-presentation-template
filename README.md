@@ -1,11 +1,26 @@
 # README
 This repository provides a template for browser-based presentations that are built from [RMarkdown](https://rmarkdown.rstudio.com) documents and utilizes the [reveal.js](https://revealjs.com) presentation framework for the generated presentation. [Pandoc](http://pandoc.org) is used to built the final presentation. The [highlight.js](https://highlightjs.org) framework is employed to provide syntax highlighting.
 
-Feel free to fork this repo and use it for your own presentations. Don't forget to **observe the licenses of the used tools and libraries** and **give credit** - ideally both in your [README](#credits---used-tools-and-licenses) and the presentation itself.
+Feel free to fork this repo and use it for your own presentations. Don't forget to **credit and observe the licenses of the used tools and libraries** - ideally both in your [README](#licenses) and the presentation itself.
 
 
 ## Table of contents
 ***Coming SOON!***
+
+
+## Quick setup of your own presentation
+Here is how you create a presentation from this repository.
+
+1. Fork this repository.
+2. Edit the `index_metadata.yaml` file with your presentation information (only the `title` is mandatory).
+3. Create your presentation by editing the `index.Rmd`. Consult the  [RMarkdown](https://rmarkdown.rstudio.com) documentation if needed.
+4. `[knitr](https://yihui.name/knitr/)` your presentation (i.e. `index.Rmd`) to create a standard `markdown` file. (Just press the `knit` button when working in RStudio).
+5. Run this `pandoc` command to produce the final presentation (`index.html`): 
+```
+pandoc -t revealjs --template=./custom_pandoc_template/default.revealjs -s -o index.html index.md index_metadata.yaml -V revealjs-url=./reveal.js-3.6.0 --no-highlight -V highlighting-css=zenburn
+```
+6. Open the `index.html` in  browser of your choice. Navigate with the arrow keys.
+7. Optionally, publish the presentation via GitHub pages (point to `master`).
 
 
 
@@ -25,13 +40,9 @@ The objectives for this template are to:
 Presentations using the **reveal.js** framework and hosted on GitHub pages meet all of these requirements. In order to utilise the latest reveal.js features a workflow using [Pandoc](http://pandoc.org) directly has been chosen over the [revealjs_rpackage](https://github.com/rstudio/revealjs). 
 
 
-## Quick start
-***Coming SOON!***
-
-
 ## Basic usage
-### Artifacts and workflow
 
+### Artifacts and workflow
 **index.Rmd** is a [`RMarkdown`](https://rmarkdown.rstudio.com) file representing the presentation source. Consult the RMarkdown documentation for the available markdown syntax.  This file could be named differently, but using `index` allows to share a shorter URL when publishing the presentation via GitHub pages.
 The file contains a minimal `YAML` header to drive the transformation to a  `markdown` file. The specified target `markdown` format is  [full Pandoc markdown](https://rmarkdown.rstudio.com/markdown_document_format.html). 
 
@@ -82,7 +93,7 @@ pandoc -t revealjs --template=./custom_pandoc_template/default.revealjs -s -o in
 Reveal.js comes packaged with a default code highlighting style `zenburn`. In order for code highlighting with [highlight.js](https://highlightjs.org/) to work, the custom Pandoc template has to be used and Pandoc's own highlighting has to be disabled (`--no-highlight`). This can be accomplished with the following command:
 
 ```
-pandoc -t revealjs --template=./custom_pandoc_template/default.revealjs -s -o index.html index.md index_metadata.yaml -V revealjs-url=./reveal.js-3.6.0 --no-highlight -V highlighting-css=rainbow
+pandoc -t revealjs --template=./custom_pandoc_template/default.revealjs -s -o index.html index.md index_metadata.yaml -V revealjs-url=./reveal.js-3.6.0 --no-highlight -V highlighting-css=zenburn
 ```
 
 This ensures that Pandoc does not parse and markup the code block. The modifications in the custom Pandoc template trigger the highlight.js library to be loaded and initialised. If the language for code block has not been provided, highlight.js will try to determine it automatically. See examples in the included slides.
@@ -99,13 +110,21 @@ pandoc -t revealjs --template=./custom_pandoc_template/default.revealjs -s -o in
 
 ## Known issues
 * center option does not work from YAML; the option `center` does only work when provided as a Pandoc variable
-* controlsLayout does not work at all
 
 
 ## Miscellaneous resources
 
 
-## Credits - Used tools and licenses
-***Coming SOON!***
+## Licenses
+Unless when noted otherwise, the contents of this repository are licensed under a *CC0 1.0* public domain license. Consider attributing by linking to https://github.com/sdaume/rmarkdown-presentation-template. 
+
+This repo utilises and/or includes components from the [reveal.js](https://revealjs.com/), [Pandoc](https://pandoc.org/) and [highlight.js](https://highlightjs.org) frameworks. The following licenses apply:
+
+* **reveal.js** is [released](https://github.com/hakimel/reveal.js) under this [MIT license](https://github.com/hakimel/reveal.js/blob/master/LICENSE).
+* **Pandoc** is [released](https://github.com/jgm/pandoc) under this [GPLv2 license](https://github.com/jgm/pandoc/blob/master/COPYRIGHT)
+* **Pandoc templates** are [released](https://github.com/jgm/pandoc/tree/master/data/templates) under this dual [GPLv2 and BSD3 license](https://github.com/jgm/pandoc/blob/master/data/templates/README.markdown). 
+* **highlight.js** is [released](https://github.com/isagalaev/highlight.js) under this [BSD license](https://github.com/isagalaev/highlight.js/blob/master/LICENSE). **NOTE** that highlight.js [offers customized downloads](https://highlightjs.org/download/) with support for selected languages, the pack chosen for this presentation template includes support for "common" languages as well as `R`, `YAML` and `Tex`.
+
+Make sure to credit these libraries and provide references to the applicable licenses when forking this repository.
 
 
