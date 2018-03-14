@@ -16,10 +16,11 @@
       span.underline{text-decoration: underline;}
       div.column{display: inline-block; vertical-align: top; width: 50%;}
   </style>
-  <link rel="stylesheet" href="./custom_highlight.js-9.12.0/styles/rainbow.css">
+  <link rel="stylesheet" href="./custom_highlight.js-9.12.0/styles/zenburn.css">
   <script src="./custom_highlight.js-9.12.0/highlight.pack.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
   <link rel="stylesheet" href="./reveal.js-3.6.0/css/theme/white.css" id="theme">
+  <link rel="stylesheet" href="./css/mycustom.css"/>
   <!-- Printing and PDF exports -->
   <script>
     var link = document.createElement( 'link' );
@@ -59,20 +60,45 @@
 </ul>
 </aside>
 </section>
-<section><section id="in-the-morning" class="title-slide slide level1"><h1>In the morning</h1></section><section id="getting-up" class="slide level2">
+<section><section id="slide-specific-customizations" class="title-slide slide level1"><h1>Slide-specific customizations</h1></section><section id="slides-without-headers" class="slide level2">
+<h2>Slides without headers</h2>
+<p>You can create slides without headers by adding a horizontal line in the markdown source:</p>
+<pre class="markdown"><code>----
+
+You can create slides without headers by adding a horizontal line in the markdown source:</code></pre>
+<p>Unfortunately, this prevents usage of additional styles specified with headers, i.e. this will not work:</p>
+<pre class="markdown"><code>---- {data-background=&quot;#1E8C45&quot;}</code></pre>
+</section><section id="a-slide-with-a-hidden-header" class="slide level2 hideslideheader">
+<h2>A slide with a hidden header</h2>
+<p>Alternatively use the CSS class <code>.hideslideheader</code> to remove a slide header.</p>
+<pre class="markdown"><code>## A slide with a hidden header {.hideslideheader}
+
+Alternatively use the CSS class `.hideslideheader` to remove a slide header.
+
+As in this very slide.</code></pre>
+<p>As in this very slide.</p>
+</section><section id="blockquotes" class="slide level2 quoteslide hideslideheader" data-background="#222">
+<h2>Blockquotes</h2>
+<blockquote>
+<p>“Reveal.js has support for nicely styled blockquotes. You just use the standard markdown syntax (i.e. lines preceded by ‘&gt; ’) to add them. This slide uses a custom style (<code>.quoteslide</code>) to change the font and alignment for quotes as well as provide a different styling and alignment for the paragraph below the quote, which is assumed to contain a quote attribution.</p>
+<p>This has been combined with a hidden header and a different background!</p>
+</blockquote>
+<p>Someone, 2018</p>
+</section></section>
+<section><section id="in-the-morning" class="title-slide slide level1"><h1>In the morning</h1></section><section id="getting-up" class="slide level2 center leftaligned">
 <h2>Getting up</h2>
 <ul>
 <li>Turn <strong>off</strong> alarm</li>
 <li>Get out of bed</li>
 </ul>
-</section><section id="breakfast" class="slide level2">
+</section><section id="breakfast" class="slide level2" style="text-align: left;">
 <h2>Breakfast</h2>
 <ul>
 <li>Eat eggs</li>
 <li>Drink coffee</li>
 </ul>
 </section></section>
-<section><section id="in-the-evening" class="title-slide slide level1"><h1>In the evening</h1></section><section id="dinner" class="slide level2">
+<section><section id="in-the-evening" class="title-slide slide level1"><h1>In the evening</h1></section><section id="leftalignsection" class="slide level2">
 <h2>Dinner</h2>
 <ul>
 <li>Eat spaghetti</li>
@@ -165,6 +191,8 @@ transition: slide
       // Full list of configuration options available at:
       // https://github.com/hakimel/reveal.js#configuration
       Reveal.initialize({
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
         // Push each slide change to the browser history
         history: true,
         // Transition style

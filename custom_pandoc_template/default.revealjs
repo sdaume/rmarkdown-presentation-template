@@ -102,7 +102,7 @@ $if(controls)$
 $endif$
 $if(controlsLayout)$
         // Determines where controls appear, "edges" or "bottom-right"
-        controlsLayout: $controlsLayout$,
+        controlsLayout: '$controlsLayout$',
 $endif$
 $if(progress)$
         // Display a presentation progress bar

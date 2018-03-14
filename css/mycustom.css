@@ -1,0 +1,40 @@
+/*Presentation-wide style changes*/
+
+.reveal {
+  font-size: 32px;
+}
+
+.reveal section img {
+  border: 0; 
+  background: None; 
+  box-shadow: None;
+}
+
+
+/*Style elements for use on individual slides*/
+.hideslideheader h1,
+.hideslideheader h2 {
+    display: none;
+} 
+
+.quoteslide {
+  background: 'black';
+}
+
+.quoteslide > blockquote {
+  background: none;
+}
+
+.quoteslide > blockquote > p {
+  text-align: left;
+  font-family: 'Source Sans Serif';
+}
+
+.quoteslide > p {
+  font-size: 60%;
+  font-weight: bold;
+  width: 70%;
+  text-align: right;
+  font-family: 'Source Sans Pro';
+  margin: auto;
+}

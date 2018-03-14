@@ -19,16 +19,69 @@ Press `S` to bring up a window in presenter mode.
 -   Courtesy of the [reveal.js](https://revealjs.com/) framework.
 
 </aside>
+Slide-specific customizations
+=============================
+
+Slides without headers
+----------------------
+
+You can create slides without headers by adding a horizontal line in the
+markdown source:
+
+``` {.markdown}
+----
+
+You can create slides without headers by adding a horizontal line in the markdown source:
+```
+
+Unfortunately, this prevents usage of additional styles specified with
+headers, i.e. this will not work:
+
+``` {.markdown}
+---- {data-background="#1E8C45"}
+```
+
+A slide with a hidden header {#a-slide-with-a-hidden-header .hideslideheader}
+----------------------------
+
+Alternatively use the CSS class `.hideslideheader` to remove a slide
+header.
+
+``` {.markdown}
+## A slide with a hidden header {.hideslideheader}
+
+Alternatively use the CSS class `.hideslideheader` to remove a slide header.
+
+As in this very slide.
+```
+
+As in this very slide.
+
+Blockquotes {#blockquotes .quoteslide .hideslideheader data-background="#222"}
+-----------
+
+> "Reveal.js has support for nicely styled blockquotes. You just use the
+> standard markdown syntax (i.e. lines preceded by '\> ') to add them.
+> This slide uses a custom style (`.quoteslide`) to change the font and
+> alignment for quotes as well as provide a different styling and
+> alignment for the paragraph below the quote, which is assumed to
+> contain a quote attribution.
+>
+> This has been combined with a hidden header and a different
+> background!
+
+Someone, 2018
+
 In the morning
 ==============
 
-Getting up
+Getting up {#getting-up .center .leftaligned}
 ----------
 
 -   Turn **off** alarm
 -   Get out of bed
 
-Breakfast
+Breakfast {#breakfast style="text-align: left;"}
 ---------
 
 -   Eat eggs
@@ -37,7 +90,7 @@ Breakfast
 In the evening
 ==============
 
-Dinner
+Dinner {#leftalignsection}
 ------
 
 -   Eat spaghetti

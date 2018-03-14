@@ -105,13 +105,37 @@ This ensures that Pandoc does not parse and markup the code block. The modificat
 
 Consult [highlight.js](https://highlightjs.org/) for the available styles and supported languages. [highlight.js](https://highlightjs.org/) offers downloads of customized packs. One of those has been included here which provides support for "common" languages as well as `R`, `YAML` and `Tex`.
 
+### Custom CSS stylesheet
+In order to include custom styles that can be referenced in individual sections or to change presentation-wide styles a custom CSS stylesheet can be specified. An example is included in the `css` folder of this template. 
+
+Either specify the CSS in the YAML by adding a line containing `css: ./css/mycustom.css` or provide it as option to the `pandoc` command as `-V css:=./css/mycustom.css`.
+
+The example included here changes for example the base font size and removes borders around images (presentation-wide). Furthermore, it adds a custom style for slides with a `blockquote` and for slides which should have hidden titles.
+
 
 ### Use `controlsLayout` option
 The [reveal.js v3.6.0](https://github.com/hakimel/reveal.js/releases/tag/3.6.0) added support for the `controlsLayout` option, which allows to display navigation arrows on the edges. This option seems to work only when provided as an argument to the `pandoc` command. Use:
 
 ```
-pandoc -t revealjs --template=./custom_pandoc_template/default.revealjs -s -o index.html index.md index_metadata.yaml -V revealjs-url=./reveal.js-3.6.0 -V controlsLayout='edges'
+pandoc -t revealjs --template=./custom_pandoc_template/default.revealjs -s -o index.html index.md index_metadata.yaml -V revealjs-url=./reveal.js-3.6.0 -V controlsLayout=edges
 ```
+
+## Custom slide styles - special cases
+This section summarizes some styles that have been provided in the custom CSS stylesheet for use in individual slides. This is not a comprehensive list, but the template presentation contains examples for all customization. 
+
+### Hiding slide titles
+A slide without a title can be created by adding a horizontal line `----` in the markdown document. The drawback of this approach is that no styles can be used in this case, i.e. adding something like `{data-background="#f2f2f2"}` after this line will not work anymore.
+
+One workaround is to define a heading with an explicit whitespace as the heading title: `## &nbsp; {data-background="#f2f2f2"}`. This can now be treated as any other heading, that is styles can be added. The drawback of this approach is that even an empty title will take up space on the slide. The alternative is to add a custom style to the header that will remove it: 
+
+```
+## Some descriptive title {.hideslideheader data-background="#f2f2f2"}
+```  
+
+This has the added advantage that you can still benefit from descriptive titles, that might be useful even if not visible in the presentation itself.
+
+
+
 
 ## Publishing and sharing
 Publishing steps:
