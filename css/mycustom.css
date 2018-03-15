@@ -11,12 +11,20 @@
 }
 
 
+/*===========================================*/
 /*Style elements for use on individual slides*/
+/*===========================================*/
+
+/*-----------------------------------------------------------*/
+/* Classes used to hide/remove a header on individual slides.*/
 .hideslideheader h1,
 .hideslideheader h2 {
     display: none;
 } 
 
+
+/*---------------------------------------------------*/
+/* Classes used to customize slides with blockquotes.*/
 .quoteslide {
   background: 'black';
 }
@@ -37,4 +45,64 @@
   text-align: right;
   font-family: 'Source Sans Pro';
   margin: auto;
+}
+
+
+/*---------------------------------------------------------------*/
+/* Classes used to customize a special additional(!) title slide.*/
+
+.title-with-logo p {
+  font-weight: bold;
+  font-size: 120%;
+  text-align: left;
+  text-transform: uppercase;
+  margin: 3px 0;
+}
+
+.title-with-logo p ~ p {
+  font-size: 90%;
+  font-style: italic;
+  font-weight: normal;
+  text-align: left;
+  text-transform: capitalize;
+  margin: 3px 0;
+}
+
+.title-without-logo p {
+/*  font-family: 'Source Sans Serif'; */
+  font-weight: bold;
+  font-size: 120%;
+  text-align: left;
+  text-transform: uppercase;
+/*  text-transform: capitalize; */
+  margin: 3px 0;
+}
+
+.title-without-logo p ~ p {
+/*  font-family: 'Source Sans Serif'; */
+  font-size: 80%;
+  font-style: italic;
+  text-align: left;
+  text-transform: capitalize;
+  margin: 3px 0;
+}
+
+.mytitlepage a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.authorsection p {
+  font-size: 65%;
+  text-align: right;
+  text-decoration: none;
+  margin: 1px 0;
+}
+
+.linksection p {
+  font-size: 50%;
+  font-style: italic;
+  margin: 3px 0;
+  text-decoration: none;
+  text-align:left;
 }

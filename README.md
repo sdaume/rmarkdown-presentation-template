@@ -20,9 +20,7 @@ Here is how you create a presentation from this repository.
 5. Install `pandoc` and run command to produce the final presentation (`index.html`): 
 
    ```
-   pandoc -t revealjs --template=./custom_pandoc_template/default.revealjs 
-     -s -o index.html index.md index_metadata.yaml -V revealjs-url=./reveal.js-3.6.0 
-     --no-highlight -V highlighting-css=zenburn
+   pandoc -t revealjs --template=./custom_pandoc_template/default.revealjs -s -o index.html index.md index_metadata.yaml -V revealjs-url=./reveal.js-3.6.0 --no-highlight -V highlighting-css=zenburn -V controlsLayout=edges
    ```
   
 6. Open the `index.html` in  browser of your choice. Navigate with the arrow keys.

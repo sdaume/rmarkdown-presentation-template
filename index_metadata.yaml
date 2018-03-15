@@ -1,9 +1,10 @@
 ---
 title: "RMarkdown Presentation Template"
-title: "Your Presentation Title"
+subtitle: "Your Presentation Subtitle"
 author: "Your Name"
 date: "10 March 2018"
 theme: white
 highlight: zenburn
 transition: slide
+css: ./css/mycustom.css
 ---

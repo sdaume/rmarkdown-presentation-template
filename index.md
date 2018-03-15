@@ -1,3 +1,105 @@
+  {#section .hideslideheader data-background="#333"}
+-
+
+::: {style="display:table;width:100%;table-layout: fixed;"}
+::: {style="display:table-cell;width:20%;height:10%;padding-left:3%"}
+![](images/somelogo.png)
+
+ 
+:::
+
+::: {.title-with-logo style="display:table-cell;width:65%;padding-right:3%;padding-left:3%;vertical-align:middle;"}
+RMarkdown presentation template
+
+This is a custom title slide in order to provide more presentation
+information (plus a logo)
+
+ 
+:::
+:::
+
+::: {style="display:table;width:100%;table-layout: fixed;"}
+::: {.mytitlepage .linksection style="display:table-cell;width:50%;padding-left:3%;vertical-align:bottom;"}
+<http://yourdomain.org>
+
+<https://github.com/yoursource>
+
+<https://yourdomain.org/thisprez>
+
+<https://yourfunders.org/generous>
+:::
+
+::: {.mytitlepage .authorsection style="display:table-cell;width:50%;padding-right:3%;"}
+  **The Speaker**
+
+*Organisation*
+
+ 
+
+*Occasion*
+
+*Place*
+
+ 
+
+*01. May 2018*
+
+ 
+
+*<first.name@yourdomain.org>*
+:::
+:::
+
+  {#section-1 .hideslideheader data-background="#333"}
+-
+
+::: {style="display:table;width:100%;table-layout: fixed;"}
+::: {.title-without-logo style="display:table-cell;width:100%;padding-right:3%;padding-left:3%;vertical-align:middle;"}
+RMarkdown presentation template
+
+This is a custom title slide in order to provide more presentation
+information (without a logo)
+
+ 
+
+ 
+
+ 
+:::
+:::
+
+::: {style="display:table;width:100%;table-layout: fixed;"}
+::: {.mytitlepage .linksection style="display:table-cell;width:50%;padding-left:3%;vertical-align:bottom;"}
+<http://yourdomain.org>
+
+<https://github.com/yoursource>
+
+<https://yourdomain.org/thisprez>
+
+<https://yourfunders.org/generous>
+:::
+
+::: {.mytitlepage .authorsection style="display:table-cell;width:50%;padding-right:3%;"}
+  **The Speaker**
+
+*Organisation*
+
+ 
+
+*Occasion*
+
+*Place*
+
+ 
+
+*01. May 2018*
+
+ 
+
+*<first.name@yourdomain.org>*
+:::
+:::
+
 Presenter mode
 --------------
 
