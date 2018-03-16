@@ -124,6 +124,12 @@ Press `S` to bring up a window in presenter mode.
 Slide-specific customizations
 =============================
 
+Create your own custom CSS
+--------------------------
+
+The following slides show some of the styles included in the custom CSS
+stylesheet for this template.
+
 Slides without headers
 ----------------------
 
@@ -159,6 +165,110 @@ As in this very slide.
 
 As in this very slide.
 
+Smaller text
+------------
+
+<small>If you need text in certain paragraphs to be smaller you can wrap
+it in `<small>` tags. This will apply to `<code>` sections that may be
+enclosed between the small tags:
+
+``` {.markdown}
+<small>
+If you need text in certain paragraphs to be smaller you can wrap it in `<small>` tags. 
+</small>
+```
+
+And it will work across multiple paragraphs. </small>
+
+More smaller text {#more-smaller-text .xs-small-pg-text}
+-----------------
+
+More control is possible with the use of CSS classes. Simply add one of
+the classes that only apply only to paragraphs, for example:
+
+``` {.markdown}
+## More smaller text {.xs-small-pg-text}
+```
+
+  CSS class            Font size
+  ------------------ -----------
+  small-pg-text            0.9em
+  x-small-pg-text          0.8em
+  xs-small-pg-text         0.6em
+
+... or you {#or-you style="font-size:0.6em;"}
+----------
+
+add a style to the header to resize everything on the slide.
+
+**Code:**
+
+``` {.markdown}
+## ... or {style="font-size:0.6em;"}
+```
+
+**Tables:**
+
+  CSS class            Font size
+  ------------------ -----------
+  small-pg-text            0.9em
+  x-small-pg-text          0.8em
+  xs-small-pg-text         0.6em
+
+**Lists:**
+
+-   Item 1
+-   Item 2
+
+Align slide left {#align-slide-left .center .left-aligned-slide}
+----------------
+
+This should:
+
+-   align **all** elements
+-   on a page left
+
+Simply add:
+
+``` {.markdown}
+## Align slide left {.left-aligned-slide}
+```
+
+Align slide right {#align-slide-right .right-aligned-slide}
+-----------------
+
+Similarly, this will
+
+-   align **all** elements
+-   on a page right
+-   by adding
+
+``` {.markdown}
+## Align slide right {.right-aligned-slide}
+```
+
+Vertical alignment {#vertical-alignment .top-aligned-slide .left-aligned-slide}
+------------------
+
+Generally, it will be visually more appealing to have slide content
+vertically centered. This can be switched off by using the
+`-V center=false` option with the `pandoc` command. Individual slides
+could then be centered by adding `.center` to the slide header:
+
+``` {.markdown}
+## Vertically center this slide {.center}
+```
+
+If most slides are vertically centered and only a few slides need to be
+aligned to the top the following class can be used.
+
+``` {.markdown}
+## Align slide to top {.top-aligned-slide}
+```
+
+But this is a bit of a hack because it has to use `!important` in the
+CSS class definition.
+
 Blockquotes {#blockquotes .quoteslide .hideslideheader data-background="#222"}
 -----------
 
@@ -174,41 +284,11 @@ Blockquotes {#blockquotes .quoteslide .hideslideheader data-background="#222"}
 
 Someone, 2018
 
-In the morning
-==============
-
-Getting up {#getting-up .center .leftaligned}
-----------
-
--   Turn **off** alarm
--   Get out of bed
-
-Breakfast {#breakfast style="text-align: left;"}
----------
-
--   Eat eggs
--   Drink coffee
-
-In the evening
-==============
-
-Dinner {#leftalignsection}
-------
-
--   Eat spaghetti
--   Drink wine
-
-Going to sleep
---------------
-
--   Get in bed
--   Count sheep
-
 Pretty code highlighting
 ========================
 
-Some code from the revealjs presentation
-----------------------------------------
+Javascript
+----------
 
 ``` {.javascript}
 function linkify( selector ) {
@@ -227,8 +307,8 @@ function linkify( selector ) {
 }
 ```
 
-Some markdown
--------------
+Markdown
+--------
 
 ``` {.markdown}
 # hello world
@@ -243,8 +323,8 @@ you can write text [with links](http://example.com) inline or [link references][
 ---
 ```
 
-Some R code
------------
+R
+-
 
 ``` {.r}
 library(rpackagetest)
@@ -258,8 +338,8 @@ hello_user <- function(name) {
 }
 ```
 
-Some YAML code
---------------
+YAML
+----
 
 ``` {.yaml}
 ---
@@ -306,3 +386,36 @@ Slide with Plot
 ---------------
 
 ![](index_files/figure-markdown/pressure-1.png)
+
+In the morning
+==============
+
+Getting up {#getting-up .left-aligned-slide}
+----------
+
+-   Turn **off** alarm
+-   Get out of bed
+
+Breakfast {#breakfast style="text-align: left;"}
+---------
+
+-   Eat eggs
+-   Drink coffee
+
+In the evening
+==============
+
+Dinner {#leftalignsection}
+------
+
+-   Eat spaghetti
+-   Drink wine
+
+Going to sleep
+--------------
+
+-   Get in bed
+-   Count sheep
+
+Thank You!
+==========
