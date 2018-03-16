@@ -419,3 +419,55 @@ Going to sleep
 
 Thank You!
 ==========
+
+Colophon {#colophon .colophon}
+--------
+
+**"RMarkdown presentation template"** by *The Speaker*
+
+ 
+
+Presented at [occasion]() on \[this date\].
+
+ 
+
+This presentation can be cited using: *doi:...*
+
+ 
+
+**PRESENTATION DETAILS**
+
+**Author/Affiliation:** The Speaker, Organisation
+
+**Contributors:** Person 1, Person 2 and Person 3
+
+**Presentation URL:**
+<https://sdaume.github.io/rmarkdown-presentation-template>
+
+**Presentation Handouts:**
+[https://sdaume.github.io/rmarkdown-presentation-template\\handouts](https://sdaume.github.io/rmarkdown-presentation-template\handouts)
+
+**Presentation Source:**
+<https://github.com/sdaume/rmarkdown-presentation-template>
+
+**Presentation PDF:** Speakerdeck
+
+ 
+
+**CREDITS & LICENSES**
+
+This presentation is delivered with the help of several free and open
+source tools and libraries. It utilises the
+[reveal.js](https://revealjs.com/) presentation framework and has been
+created using [RMarkdown](https://rmarkdown.rstudio.com),
+[knitr](https://yihui.name/knitr/), [RStudio](https://www.rstudio.com)
+and [Pandoc](https://pandoc.org/).
+[highlight.js](https://highlightjs.org) provides syntax highlighting for
+code sections. PDF and JPG copies of this presentation were generated
+with [DeckTape](https://github.com/astefanutti/decktape). Please note
+the respective licenses of these tools and libraries.
+
+ 
+
+If not noted and attributed otherwise, the contents (text, charts,
+images) of this presentation are **Copyright © 2018 of the Author**.

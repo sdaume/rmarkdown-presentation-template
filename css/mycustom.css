@@ -138,3 +138,19 @@
   text-decoration: none;
   text-align:left;
 }
+
+
+/*---------------------------------------------------------------*/
+/* Classes used for the colophon slide*/
+.colophon > p {
+  text-align: left;
+  font-size: 0.6em;
+  margin: 1px;
+}
+
+.colophon > h2 {
+  text-align: left;
+}
+
+
+
