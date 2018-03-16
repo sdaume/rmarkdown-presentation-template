@@ -5,7 +5,7 @@
   <meta name="generator" content="pandoc">
   <meta name="author" content="Your Name">
   <meta name="dcterms.date" content="2018-03-10">
-  <title>Your Presentation Title</title>
+  <title>RMarkdown Presentation Template</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -16,10 +16,11 @@
       span.underline{text-decoration: underline;}
       div.column{display: inline-block; vertical-align: top; width: 50%;}
   </style>
-  <link rel="stylesheet" href="./custom_highlight.js-9.12.0/styles/rainbow.css">
+  <link rel="stylesheet" href="./custom_highlight.js-9.12.0/styles/zenburn.css">
   <script src="./custom_highlight.js-9.12.0/highlight.pack.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
   <link rel="stylesheet" href="./reveal.js-3.6.0/css/theme/white.css" id="theme">
+  <link rel="stylesheet" href="./css/mycustom.css"/>
   <!-- Printing and PDF exports -->
   <script>
     var link = document.createElement( 'link' );
@@ -37,11 +38,76 @@
     <div class="slides">
 
 <section id="title-slide">
-  <h1 class="title">Your Presentation Title</h1>
+  <h1 class="title">RMarkdown Presentation Template</h1>
+  <p class="subtitle">Your Presentation Subtitle</p>
   <p class="author">Your Name</p>
   <p class="date">10 March 2018</p>
 </section>
 
+<section id="section" class="slide level2 hideslideheader" data-background="#333">
+<h2> </h2>
+<div style="display:table;width:100%;table-layout: fixed;">
+<div style="display:table-cell;width:20%;height:10%;padding-left:3%">
+<p><img data-src="images/somelogo.png" /></p>
+<p> </p>
+</div>
+<div class="title-with-logo" style="display:table-cell;width:65%;padding-right:3%;padding-left:3%;vertical-align:middle;">
+<p>RMarkdown presentation template</p>
+<p>This is a custom title slide in order to provide more presentation information (plus a logo)</p>
+<p> </p>
+</div>
+</div>
+<div style="display:table;width:100%;table-layout: fixed;">
+<div class="mytitlepage linksection" style="display:table-cell;width:50%;padding-left:3%;vertical-align:bottom;">
+<p><a href="http://yourdomain.org" class="uri">http://yourdomain.org</a></p>
+<p><a href="https://github.com/yoursource" class="uri">https://github.com/yoursource</a></p>
+<p><a href="https://yourdomain.org/thisprez" class="uri">https://yourdomain.org/thisprez</a></p>
+<p><a href="https://yourfunders.org/generous" class="uri">https://yourfunders.org/generous</a></p>
+</div>
+<div class="mytitlepage authorsection" style="display:table-cell;width:50%;padding-right:3%;">
+<p>  <strong>The Speaker</strong></p>
+<p><em>Organisation</em></p>
+<p> </p>
+<p><em>Occasion</em></p>
+<p><em>Place</em></p>
+<p> </p>
+<p><em>01. May 2018</em></p>
+<p> </p>
+<p><em><a href="mailto:first.name@yourdomain.org">first.name@yourdomain.org</a></em></p>
+</div>
+</div>
+</section>
+<section id="section-1" class="slide level2 hideslideheader" data-background="#333">
+<h2> </h2>
+<div style="display:table;width:100%;table-layout: fixed;">
+<div class="title-without-logo" style="display:table-cell;width:100%;padding-right:3%;padding-left:3%;vertical-align:middle;">
+<p>RMarkdown presentation template</p>
+<p>This is a custom title slide in order to provide more presentation information (without a logo)</p>
+<p> </p>
+<p> </p>
+<p> </p>
+</div>
+</div>
+<div style="display:table;width:100%;table-layout: fixed;">
+<div class="mytitlepage linksection" style="display:table-cell;width:50%;padding-left:3%;vertical-align:bottom;">
+<p><a href="http://yourdomain.org" class="uri">http://yourdomain.org</a></p>
+<p><a href="https://github.com/yoursource" class="uri">https://github.com/yoursource</a></p>
+<p><a href="https://yourdomain.org/thisprez" class="uri">https://yourdomain.org/thisprez</a></p>
+<p><a href="https://yourfunders.org/generous" class="uri">https://yourfunders.org/generous</a></p>
+</div>
+<div class="mytitlepage authorsection" style="display:table-cell;width:50%;padding-right:3%;">
+<p>  <strong>The Speaker</strong></p>
+<p><em>Organisation</em></p>
+<p> </p>
+<p><em>Occasion</em></p>
+<p><em>Place</em></p>
+<p> </p>
+<p><em>01. May 2018</em></p>
+<p> </p>
+<p><em><a href="mailto:first.name@yourdomain.org">first.name@yourdomain.org</a></em></p>
+</div>
+</div>
+</section>
 <section id="presenter-mode" class="slide level2">
 <h2>Presenter mode</h2>
 <p>Speaker notes can be added like this to any section:</p>
@@ -59,34 +125,127 @@
 </ul>
 </aside>
 </section>
-<section><section id="in-the-morning" class="title-slide slide level1"><h1>In the morning</h1></section><section id="getting-up" class="slide level2">
-<h2>Getting up</h2>
+<section><section id="slide-specific-customizations" class="title-slide slide level1"><h1>Slide-specific customizations</h1></section><section id="create-your-own-custom-css" class="slide level2">
+<h2>Create your own custom CSS</h2>
+<p>The following slides show some of the styles included in the custom CSS stylesheet for this template.</p>
+</section><section id="slides-without-headers" class="slide level2">
+<h2>Slides without headers</h2>
+<p>You can create slides without headers by adding a horizontal line in the markdown source:</p>
+<pre class="markdown"><code>----
+
+You can create slides without headers by adding a horizontal line in the markdown source:</code></pre>
+<p>Unfortunately, this prevents usage of additional styles specified with headers, i.e. this will not work:</p>
+<pre class="markdown"><code>---- {data-background=&quot;#1E8C45&quot;}</code></pre>
+</section><section id="a-slide-with-a-hidden-header" class="slide level2 hideslideheader">
+<h2>A slide with a hidden header</h2>
+<p>Alternatively use the CSS class <code>.hideslideheader</code> to remove a slide header.</p>
+<pre class="markdown"><code>## A slide with a hidden header {.hideslideheader}
+
+Alternatively use the CSS class `.hideslideheader` to remove a slide header.
+
+As in this very slide.</code></pre>
+<p>As in this very slide.</p>
+</section><section id="smaller-text" class="slide level2">
+<h2>Smaller text</h2>
+<p><small>If you need text in certain paragraphs to be smaller you can wrap it in <code>&lt;small&gt;</code> tags. This will apply to <code>&lt;code&gt;</code> sections that may be enclosed between the small tags:</p>
+<pre class="markdown"><code>&lt;small&gt;
+If you need text in certain paragraphs to be smaller you can wrap it in `&lt;small&gt;` tags. 
+&lt;/small&gt;</code></pre>
+<p>And it will work across multiple paragraphs. </small></p>
+</section><section id="more-smaller-text" class="slide level2 xs-small-pg-text">
+<h2>More smaller text</h2>
+<p>More control is possible with the use of CSS classes. Simply add one of the classes that only apply only to paragraphs, for example:</p>
+<pre class="markdown"><code>## More smaller text {.xs-small-pg-text}</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">CSS class</th>
+<th style="text-align: right;">Font size</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">small-pg-text</td>
+<td style="text-align: right;">0.9em</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">x-small-pg-text</td>
+<td style="text-align: right;">0.8em</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">xs-small-pg-text</td>
+<td style="text-align: right;">0.6em</td>
+</tr>
+</tbody>
+</table>
+</section><section id="or-you" class="slide level2" style="font-size:0.6em;">
+<h2>… or you</h2>
+<p>add a style to the header to resize everything on the slide.</p>
+<p><strong>Code:</strong></p>
+<pre class="markdown"><code>## ... or {style=&quot;font-size:0.6em;&quot;}</code></pre>
+<p><strong>Tables:</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">CSS class</th>
+<th style="text-align: right;">Font size</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">small-pg-text</td>
+<td style="text-align: right;">0.9em</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">x-small-pg-text</td>
+<td style="text-align: right;">0.8em</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">xs-small-pg-text</td>
+<td style="text-align: right;">0.6em</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Lists:</strong></p>
 <ul>
-<li>Turn <strong>off</strong> alarm</li>
-<li>Get out of bed</li>
+<li>Item 1</li>
+<li>Item 2</li>
 </ul>
-</section><section id="breakfast" class="slide level2">
-<h2>Breakfast</h2>
+</section><section id="align-slide-left" class="slide level2 center left-aligned-slide">
+<h2>Align slide left</h2>
+<p>This should:</p>
 <ul>
-<li>Eat eggs</li>
-<li>Drink coffee</li>
+<li>align <strong>all</strong> elements</li>
+<li>on a page left</li>
 </ul>
+<p>Simply add:</p>
+<pre class="markdown"><code>## Align slide left {.left-aligned-slide}</code></pre>
+</section><section id="align-slide-right" class="slide level2 right-aligned-slide">
+<h2>Align slide right</h2>
+<p>Similarly, this will</p>
+<ul>
+<li>align <strong>all</strong> elements</li>
+<li>on a page right</li>
+<li>by adding</li>
+</ul>
+<pre class="markdown"><code>## Align slide right {.right-aligned-slide}</code></pre>
+</section><section id="vertical-alignment" class="slide level2 top-aligned-slide left-aligned-slide">
+<h2>Vertical alignment</h2>
+<p>Generally, it will be visually more appealing to have slide content vertically centered. This can be switched off by using the <code>-V center=false</code> option with the <code>pandoc</code> command. Individual slides could then be centered by adding <code>.center</code> to the slide header:</p>
+<pre class="markdown"><code>## Vertically center this slide {.center}</code></pre>
+<p>If most slides are vertically centered and only a few slides need to be aligned to the top the following class can be used.</p>
+<pre class="markdown"><code>## Align slide to top {.top-aligned-slide}</code></pre>
+<p>But this is a bit of a hack because it has to use <code>!important</code> in the CSS class definition.</p>
+</section><section id="blockquotes" class="slide level2 quoteslide hideslideheader" data-background="#222">
+<h2>Blockquotes</h2>
+<blockquote>
+<p>“Reveal.js has support for nicely styled blockquotes. You just use the standard markdown syntax (i.e. lines preceded by ‘&gt; ’) to add them. This slide uses a custom style (<code>.quoteslide</code>) to change the font and alignment for quotes as well as provide a different styling and alignment for the paragraph below the quote, which is assumed to contain a quote attribution.</p>
+<p>This has been combined with a hidden header and a different background!</p>
+</blockquote>
+<p>Someone, 2018</p>
 </section></section>
-<section><section id="in-the-evening" class="title-slide slide level1"><h1>In the evening</h1></section><section id="dinner" class="slide level2">
-<h2>Dinner</h2>
-<ul>
-<li>Eat spaghetti</li>
-<li>Drink wine</li>
-</ul>
-</section><section id="going-to-sleep" class="slide level2">
-<h2>Going to sleep</h2>
-<ul>
-<li>Get in bed</li>
-<li>Count sheep</li>
-</ul>
-</section></section>
-<section><section id="pretty-code-highlighting" class="title-slide slide level1"><h1>Pretty code highlighting</h1></section><section id="some-code-from-the-revealjs-presentation" class="slide level2">
-<h2>Some code from the revealjs presentation</h2>
+<section><section id="pretty-code-highlighting" class="title-slide slide level1"><h1>Pretty code highlighting</h1></section><section id="javascript" class="slide level2">
+<h2>Javascript</h2>
 <pre class="javascript"><code>function linkify( selector ) {
   if( supports3DTransforms ) {
 
@@ -101,8 +260,8 @@
     }
   }
 }</code></pre>
-</section><section id="some-markdown" class="slide level2">
-<h2>Some markdown</h2>
+</section><section id="markdown" class="slide level2">
+<h2>Markdown</h2>
 <pre class="markdown"><code># hello world
 
 you can write text [with links](http://example.com) inline or [link references][1].
@@ -113,8 +272,8 @@ you can write text [with links](http://example.com) inline or [link references][
 [1]: http://example.com
 
 ---</code></pre>
-</section><section id="some-r-code" class="slide level2">
-<h2>Some R code</h2>
+</section><section id="r" class="slide level2">
+<h2>R</h2>
 <pre class="r"><code>library(rpackagetest)
 
 hello_user &lt;- function(name) {
@@ -124,8 +283,8 @@ hello_user &lt;- function(name) {
     print(&quot;Hello, stranger!&quot;)
   }
 }</code></pre>
-</section><section id="some-yaml-code" class="slide level2">
-<h2>Some YAML code</h2>
+</section><section id="yaml" class="slide level2">
+<h2>YAML</h2>
 <pre class="yaml"><code>---
 title: &quot;RMarkdown Presentation Template&quot;
 title: &quot;Your Presentation Title&quot;
@@ -154,6 +313,53 @@ transition: slide
 <h2>Slide with Plot</h2>
 <p><img data-src="index_files/figure-markdown/pressure-1.png" /></p>
 </section></section>
+<section><section id="in-the-morning" class="title-slide slide level1"><h1>In the morning</h1></section><section id="getting-up" class="slide level2 left-aligned-slide">
+<h2>Getting up</h2>
+<ul>
+<li>Turn <strong>off</strong> alarm</li>
+<li>Get out of bed</li>
+</ul>
+</section><section id="breakfast" class="slide level2" style="text-align: left;">
+<h2>Breakfast</h2>
+<ul>
+<li>Eat eggs</li>
+<li>Drink coffee</li>
+</ul>
+</section></section>
+<section><section id="in-the-evening" class="title-slide slide level1"><h1>In the evening</h1></section><section id="leftalignsection" class="slide level2">
+<h2>Dinner</h2>
+<ul>
+<li>Eat spaghetti</li>
+<li>Drink wine</li>
+</ul>
+</section><section id="going-to-sleep" class="slide level2">
+<h2>Going to sleep</h2>
+<ul>
+<li>Get in bed</li>
+<li>Count sheep</li>
+</ul>
+</section></section>
+<section><section id="thank-you" class="title-slide slide level1"><h1>Thank You!</h1></section><section id="colophon" class="slide level2 colophon">
+<h2>Colophon</h2>
+<p><strong>“RMarkdown presentation template”</strong> by <em>The Speaker</em></p>
+<p> </p>
+<p>Presented at <a href="">occasion</a> on [this date].</p>
+<p> </p>
+<p>This presentation can be cited using: <em>doi:…</em></p>
+<p> </p>
+<p><strong>PRESENTATION DETAILS</strong></p>
+<p><strong>Author/Affiliation:</strong> The Speaker, Organisation</p>
+<p><strong>Contributors:</strong> Person 1, Person 2 and Person 3</p>
+<p><strong>Presentation URL:</strong> <a href="https://sdaume.github.io/rmarkdown-presentation-template" class="uri">https://sdaume.github.io/rmarkdown-presentation-template</a></p>
+<p><strong>Presentation Handouts:</strong> <a href="https://sdaume.github.io/rmarkdown-presentation-template\handouts" class="uri">https://sdaume.github.io/rmarkdown-presentation-template\handouts</a></p>
+<p><strong>Presentation Source:</strong> <a href="https://github.com/sdaume/rmarkdown-presentation-template" class="uri">https://github.com/sdaume/rmarkdown-presentation-template</a></p>
+<p><strong>Presentation PDF:</strong> Speakerdeck</p>
+<p> </p>
+<p><strong>CREDITS &amp; LICENSES</strong></p>
+<p>This presentation is delivered with the help of several free and open source tools and libraries. It utilises the <a href="https://revealjs.com/">reveal.js</a> presentation framework and has been created using <a href="https://rmarkdown.rstudio.com">RMarkdown</a>, <a href="https://yihui.name/knitr/">knitr</a>, <a href="https://www.rstudio.com">RStudio</a> and <a href="https://pandoc.org/">Pandoc</a>. <a href="https://highlightjs.org">highlight.js</a> provides syntax highlighting for code sections. PDF and JPG copies of this presentation were generated with <a href="https://github.com/astefanutti/decktape">DeckTape</a>. Please note the respective licenses of these tools and libraries.</p>
+<p> </p>
+<p>If not noted and attributed otherwise, the contents (text, charts, images) of this presentation are <strong>Copyright © 2018 of the Author</strong>.</p>
+</section></section>
     </div>
   </div>
 
@@ -165,6 +371,8 @@ transition: slide
       // Full list of configuration options available at:
       // https://github.com/hakimel/reveal.js#configuration
       Reveal.initialize({
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
         // Push each slide change to the browser history
         history: true,
         // Transition style

@@ -8,8 +8,116 @@ output:
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-## Presenter mode
+[//]: <> (Alternative background colours #002b36 #333 #1E8C45)
 
+## &nbsp; {.hideslideheader data-background="#333"}
+<div style="display:table;width:100%;table-layout: fixed;">
+  <div style="display:table-cell;width:20%;height:10%;padding-left:3%">
+  ![](images/somelogo.png)
+    
+  &nbsp;
+
+  </div>
+  
+  <div class="title-with-logo" style="display:table-cell;width:65%;padding-right:3%;padding-left:3%;vertical-align:middle;">
+  RMarkdown presentation template
+  
+  This is a custom title slide in order to provide more presentation information (plus a logo)
+  
+  &nbsp;
+
+  </div>
+</div>
+
+<div style="display:table;width:100%;table-layout: fixed;">
+  <div class="mytitlepage linksection" style="display:table-cell;width:50%;padding-left:3%;vertical-align:bottom;">
+  [http://yourdomain.org](http://yourdomain.org)
+  
+  [https://github.com/yoursource](https://github.com/yoursource)
+  
+  [https://yourdomain.org/thisprez](https://yourdomain.org/thisprez)
+  
+  [https://yourfunders.org/generous](https://yourfunders.org/generous)
+  </div>
+  
+  
+  <div class="mytitlepage authorsection" style="display:table-cell;width:50%;padding-right:3%;">
+  &nbsp;
+  **The Speaker**
+  
+  *Organisation*
+  
+  &nbsp;
+  
+  *Occasion*
+  
+  *Place*
+  
+  &nbsp;
+  
+  *01. May 2018*
+  
+  &nbsp;
+  
+  *first.name@yourdomain.org*
+  </div>
+</div>
+
+
+
+
+## &nbsp; {.hideslideheader data-background="#333"}
+<div style="display:table;width:100%;table-layout: fixed;">
+  <div class="title-without-logo" style="display:table-cell;width:100%;padding-right:3%;padding-left:3%;vertical-align:middle;">
+  RMarkdown presentation template
+  
+  This is a custom title slide in order to provide more presentation information (without a logo)
+    
+  &nbsp;
+    
+  &nbsp;
+  
+  &nbsp;
+  </div>
+</div>
+
+<div style="display:table;width:100%;table-layout: fixed;">
+  <div class="mytitlepage linksection" style="display:table-cell;width:50%;padding-left:3%;vertical-align:bottom;">
+  [http://yourdomain.org](http://yourdomain.org)
+  
+  [https://github.com/yoursource](https://github.com/yoursource)
+  
+  [https://yourdomain.org/thisprez](https://yourdomain.org/thisprez)
+  
+  [https://yourfunders.org/generous](https://yourfunders.org/generous)
+  </div>
+  
+  
+  <div class="mytitlepage authorsection" style="display:table-cell;width:50%;padding-right:3%;">
+  &nbsp;
+  **The Speaker**
+  
+  *Organisation*
+  
+  &nbsp;
+  
+  *Occasion*
+  
+  *Place*
+  
+  &nbsp;
+  
+  *01. May 2018*
+  
+  &nbsp;
+  
+  *first.name@yourdomain.org*
+  </div>
+</div>
+
+
+
+## Presenter mode
 Speaker notes can be added like this to any section:
 
 ```markup
@@ -28,33 +136,155 @@ Press `S` to bring up a window in presenter mode.
 </aside>
 
 
-# In the morning
 
-## Getting up
+# Slide-specific customizations 
 
-- Turn **off** alarm
-- Get out of bed
+## Create your own custom CSS
+The following slides show some of the styles included in the custom CSS stylesheet for this template. 
 
-## Breakfast 
 
-- Eat eggs
-- Drink coffee
+## Slides without headers
+You can create slides without headers by adding a horizontal line in the markdown source: 
 
-# In the evening
+```markdown
+----
 
-## Dinner
+You can create slides without headers by adding a horizontal line in the markdown source:
+```
+Unfortunately, this prevents usage of additional styles specified with headers, i.e. this will not work:
 
-- Eat spaghetti
-- Drink wine
 
-## Going to sleep
+```markdown
+---- {data-background="#1E8C45"}
+```
 
-- Get in bed
-- Count sheep
+## A slide with a hidden header {.hideslideheader}
+Alternatively use the CSS class `.hideslideheader` to remove a slide header.
+
+```markdown
+## A slide with a hidden header {.hideslideheader}
+
+Alternatively use the CSS class `.hideslideheader` to remove a slide header.
+
+As in this very slide.
+```
+
+As in this very slide.
+
+
+## Smaller text
+<small>If you need text in certain paragraphs to be smaller you can wrap it in `<small>` tags. This will apply to `<code>` sections that may be enclosed between the small tags: 
+
+```markdown
+<small>
+If you need text in certain paragraphs to be smaller you can wrap it in `<small>` tags. 
+</small>
+```
+
+And it will work across multiple paragraphs.
+</small>
+
+
+## More smaller text {.xs-small-pg-text}
+More control is possible with the use of CSS classes. Simply add one of the classes that only apply only to paragraphs, for example:
+
+```markdown
+## More smaller text {.xs-small-pg-text}
+```
+CSS class|Font size|
+:--------|--------:|
+small-pg-text|0.9em|
+x-small-pg-text|0.8em|
+xs-small-pg-text|0.6em|
+
+
+## ... or you {style="font-size:0.6em;"}
+add a style to the header to resize everything on the slide.
+
+**Code:**
+
+```markdown
+## ... or {style="font-size:0.6em;"}
+```
+
+**Tables:**
+
+|CSS class|Font size|
+|:--------|--------:|
+|small-pg-text|0.9em|
+|x-small-pg-text|0.8em|
+|xs-small-pg-text|0.6em|
+
+**Lists:**
+
+* Item 1
+* Item 2
+
+
+
+
+## Align slide left {.center .left-aligned-slide}
+
+This should:
+
+- align **all** elements
+- on a page left
+
+Simply add:
+
+```markdown
+## Align slide left {.left-aligned-slide}
+```
+
+## Align slide right {.right-aligned-slide}
+
+Similarly, this will
+
+- align **all** elements
+- on a page right
+- by adding
+
+```markdown
+## Align slide right {.right-aligned-slide}
+```
+
+
+## Vertical alignment {.top-aligned-slide .left-aligned-slide}
+Generally, it will be visually more appealing to have slide content vertically centered. This can be switched off by using the `-V center=false` option with the `pandoc` command. Individual slides could then be centered by adding `.center` to the slide header:
+
+```markdown
+## Vertically center this slide {.center}
+```
+
+If most slides are vertically centered and only a few slides need to be aligned to the top the following class can be used.
+
+```markdown
+## Align slide to top {.top-aligned-slide}
+```
+
+But this is a bit of a hack because it has to use `!important` in the CSS class definition.
+
+
+
+## Blockquotes {.quoteslide .hideslideheader data-background="#222"}
+
+> "Reveal.js has support for nicely styled blockquotes. You just use the 
+> standard markdown syntax (i.e. lines preceded by '&gt;&nbsp;') to add 
+> them. This slide uses a custom style (`.quoteslide`) to change the font and
+> alignment for quotes as well as provide a different styling and alignment
+> for the paragraph below the quote, which is assumed to contain a quote
+> attribution. 
+> 
+> This has been combined with a hidden header and a different 
+> background!
+
+Someone, 2018
+
+
 
 # Pretty code highlighting
 
-## Some code from the revealjs presentation
+## Javascript
 
 ```javascript
 function linkify( selector ) {
@@ -73,7 +303,7 @@ function linkify( selector ) {
 }
 ```
 
-## Some markdown
+## Markdown
 
 ```markdown
 # hello world
@@ -88,7 +318,7 @@ you can write text [with links](http://example.com) inline or [link references][
 ---
 ```
 
-## Some R code
+## R
 
 ```r
 library(rpackagetest)
@@ -102,7 +332,7 @@ hello_user <- function(name) {
 }
 ```
 
-## Some YAML code
+## YAML
 
 ```yaml
 ---
@@ -136,3 +366,73 @@ summary(cars)
 ```{r pressure}
 plot(pressure)
 ```
+
+
+
+# In the morning
+
+## Getting up {.left-aligned-slide}
+
+- Turn **off** alarm
+- Get out of bed
+
+## Breakfast {style="text-align: left;"}
+
+- Eat eggs
+- Drink coffee
+
+# In the evening
+
+## Dinner {#leftalignsection}
+
+- Eat spaghetti
+- Drink wine
+
+## Going to sleep
+
+- Get in bed
+- Count sheep
+
+# Thank You!
+
+## Colophon {.colophon}
+**"RMarkdown presentation template"** by *The Speaker*
+
+&nbsp;
+
+Presented at [occasion]() on [this date].
+
+&nbsp;
+
+This presentation can be cited using: *doi:...*
+
+&nbsp;
+
+**PRESENTATION DETAILS**
+
+**Author/Affiliation:** The Speaker, Organisation
+
+**Contributors:** Person 1, Person 2 and Person 3
+
+**Presentation URL:** https://sdaume.github.io/rmarkdown-presentation-template
+
+**Presentation Handouts:** https://sdaume.github.io/rmarkdown-presentation-template\handouts
+
+**Presentation Source:** https://github.com/sdaume/rmarkdown-presentation-template
+
+**Presentation PDF:** Speakerdeck
+
+&nbsp;
+
+**CREDITS & LICENSES**
+
+This presentation is delivered with the help of several free and open source tools and libraries. It utilises the [reveal.js](https://revealjs.com/) presentation framework and has been created using [RMarkdown](https://rmarkdown.rstudio.com), [knitr](https://yihui.name/knitr/), [RStudio](https://www.rstudio.com) and [Pandoc](https://pandoc.org/). [highlight.js](https://highlightjs.org) provides syntax highlighting for code sections. PDF and JPG copies of this presentation were generated with [DeckTape](https://github.com/astefanutti/decktape). Please note the respective licenses of these tools and libraries.
+
+&nbsp;
+
+If not noted and attributed otherwise, the contents (text, charts, images) of this presentation are **Copyright &copy; 2018 of the Author**. 
+
+
+
+
+
