@@ -8,7 +8,7 @@ output:
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-[//]: <> (Alternative background colours #002b36 #333 #1E8C45)
+[//]: <> (Alternative background colours are #002b36 #333 #1E8C45)
 
 ## &nbsp; {.hideslideheader data-background="#333"}
 <div style="display:table;width:100%;table-layout: fixed;">
@@ -20,7 +20,7 @@ knitr::opts_chunk$set(echo = FALSE)
   </div>
   
   <div class="title-with-logo" style="display:table-cell;width:65%;padding-right:3%;padding-left:3%;vertical-align:middle;">
-  RMarkdown presentation template
+  RMarkdown Presentation template
   
   This is a custom title slide in order to provide more presentation information (plus a logo)
   

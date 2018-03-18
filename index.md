@@ -9,7 +9,7 @@
 :::
 
 ::: {.title-with-logo style="display:table-cell;width:65%;padding-right:3%;padding-left:3%;vertical-align:middle;"}
-RMarkdown presentation template
+RMarkdown Presentation template
 
 This is a custom title slide in order to provide more presentation
 information (plus a logo)
