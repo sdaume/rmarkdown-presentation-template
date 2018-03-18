@@ -163,7 +163,7 @@ This will result in a high-quality PDF copy of your presentation that can be sha
 `decktape` offers a number of other options. A great feature is the ability to export slides as invidual images (png, jpg). This is an added benefit if you want to include some images of your slides in handouts. The following command creates slide images of a presentation in addition to the PDF:
 
 ```
-decktape reveal <PRESENTATION_URL> <FILENAME>.pdf --screenshots --screenshots-directory ./imageslides
+decktape reveal <PRESENTATION_URL> <FILENAME>.pdf --screenshots --screenshots-directory ./handouts/screenshots
 ```
 
 Consult the [decktape documentation](https://github.com/astefanutti/decktape) for more configuration options.
