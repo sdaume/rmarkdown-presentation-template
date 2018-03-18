@@ -1,15 +1,16 @@
 ---
-title: "RMarkdown presentation handout template "
+title: 'RMarkdown presentation handout template '
 author: "The Speaker"
 date: '`r Sys.Date()`'
 output:
-  tufte::tufte_html: 
-    tufte_variant: 'envisioned'
+  tufte::tufte_html:
+    tufte_variant: envisioned
   tufte::tufte_handout:
     citation_package: natbib
-    latex_engine: xelatex
+    latex_engine: pdflatex
 link-citations: yes
-subtitle: An implementation in R Markdown based on a package by JJ Allaire and Yihui Xie
+subtitle: An implementation in R Markdown based on a package by JJ Allaire and Yihui
+  Xie
 bibliography: handout.bib
 ---
 
