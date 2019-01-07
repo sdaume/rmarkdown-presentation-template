@@ -188,6 +188,7 @@ This repo utilises and/or includes components from the [reveal.js](https://revea
 * **Pandoc** is [released](https://github.com/jgm/pandoc) under this [GPLv2 license](https://github.com/jgm/pandoc/blob/master/COPYRIGHT)
 * **Pandoc templates** are [released](https://github.com/jgm/pandoc/tree/master/data/templates) under this dual [GPLv2 and BSD3 license](https://github.com/jgm/pandoc/blob/master/data/templates/README.markdown). 
 * **highlight.js** is [released](https://github.com/isagalaev/highlight.js) under this [BSD license](https://github.com/isagalaev/highlight.js/blob/master/LICENSE). **NOTE** that highlight.js [offers customized downloads](https://highlightjs.org/download/) with support for selected languages, the pack chosen for this presentation template includes support for "common" languages as well as `R`, `YAML` and `Tex`.
+* **[knitr](https://github.com/yihui/knitr)** and the **[tufte](https://github.com/rstudio/tufte)** packages have been used to generate presentation handouts. The former is released under a GPL2/GPL3 license and the latter under a GPL3 license.
 
 Other credits:
 * **DeckTape** has been used to create a PDF copy of this presentation template as well as slide screenshots for the handouts. **DeckTape** is [released](https://github.com/astefanutti/decktape) is released under this [MIT license](https://github.com/astefanutti/decktape/blob/master/LICENSE).
