@@ -313,6 +313,13 @@ transition: slide
 <h2>Slide with Plot</h2>
 <p><img data-src="index_files/figure-markdown/pressure-1.png" /></p>
 </section></section>
+<section><section id="mathematical-formulas" class="title-slide slide level1"><h1>Mathematical formulas</h1></section><section id="rendering-mathematical-notations" class="slide level2">
+<h2>Rendering mathematical notations</h2>
+<p>By default a local copy of <a href="https://www.mathjax.org">MathJax</a> is included and utilised to support the correct rendering of mathematical formulas. A notation included as</p>
+<pre class="markdown"><code>$$\sum_{n=1}^{10} n^2$$</code></pre>
+<p>is rendered by MathJax as</p>
+<p><code>$$\sum_{n=1}^{10} n^2$$</code></p>
+</section></section>
 <section><section id="in-the-morning" class="title-slide slide level1"><h1>In the morning</h1></section><section id="getting-up" class="slide level2 left-aligned-slide">
 <h2>Getting up</h2>
 <ul>
@@ -356,7 +363,7 @@ transition: slide
 <p><strong>Presentation PDF:</strong> Speakerdeck</p>
 <p> </p>
 <p><strong>CREDITS &amp; LICENSES</strong></p>
-<p>This presentation is delivered with the help of several free and open source tools and libraries. It utilises the <a href="https://revealjs.com/">reveal.js</a> presentation framework and has been created using <a href="https://rmarkdown.rstudio.com">RMarkdown</a>, <a href="https://yihui.name/knitr/">knitr</a>, <a href="https://www.rstudio.com">RStudio</a> and <a href="https://pandoc.org/">Pandoc</a>. <a href="https://highlightjs.org">highlight.js</a> provides syntax highlighting for code sections. PDF and JPG copies of this presentation were generated with <a href="https://github.com/astefanutti/decktape">DeckTape</a>. Please note the respective licenses of these tools and libraries.</p>
+<p>This presentation is delivered with the help of several free and open source tools and libraries. It utilises the <a href="https://revealjs.com/">reveal.js</a> presentation framework and has been created using <a href="https://rmarkdown.rstudio.com">RMarkdown</a>, <a href="https://yihui.name/knitr/">knitr</a>, <a href="https://www.rstudio.com">RStudio</a> and <a href="https://pandoc.org/">Pandoc</a>. <a href="https://highlightjs.org">highlight.js</a> provides syntax highlighting for code sections. <a href="https://www.mathjax.org">MathJax</a> supports the rendering of mathematical notations. PDF and JPG copies of this presentation were generated with <a href="https://github.com/astefanutti/decktape">DeckTape</a>. Please note the respective licenses of these tools and libraries.</p>
 <p> </p>
 <p>If not noted and attributed otherwise, the contents (text, charts, images) of this presentation are <strong>Copyright © 2018 of the Author</strong>.</p>
 </section></section>
@@ -377,11 +384,28 @@ transition: slide
         history: true,
         // Transition style
         transition: 'slide', // none/fade/slide/convex/concave/zoom
+        math: {
+          mathjax: './MathJax-2.7.5/MathJax.js',
+          config: 'TeX-MML-AM_SVG-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
 
         // Optional reveal.js plugins
         dependencies: [
           { src: './reveal.js-3.6.0/lib/js/classList.js', condition: function() { return !document.body.classList; } },
           { src: './reveal.js-3.6.0/plugin/zoom-js/zoom.js', async: true },
+          { src: './reveal.js-3.6.0/plugin/math/math.js', async: true },
           { src: './reveal.js-3.6.0/plugin/notes/notes.js', async: true }
         ]
       });

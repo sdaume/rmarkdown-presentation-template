@@ -236,8 +236,8 @@ $if(maxScale)$
 $endif$
 $if(mathjax)$
         math: {
-          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
-          config: 'TeX-AMS_HTML-full',
+          mathjax: './MathJax-2.7.5/MathJax.js',
+          config: 'TeX-MML-AM_SVG-full',
           tex2jax: {
             inlineMath: [['\\(','\\)']],
             displayMath: [['\\[','\\]']],

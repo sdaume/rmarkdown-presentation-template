@@ -20,7 +20,7 @@ Here is how you create a presentation from this repository.
 5. Install `pandoc` and run command to produce the final presentation (`index.html`): 
 
    ```
-   pandoc -t revealjs --template=./custom_pandoc_template/default.revealjs -s -o index.html index.md index_metadata.yaml -V revealjs-url=./reveal.js-3.6.0 --no-highlight -V highlighting-css=zenburn -V controlsLayout=edges
+   pandoc -t revealjs --template=./custom_pandoc_template/default.revealjs -s -o index.html index.md index_metadata.yaml -V revealjs-url=./reveal.js-3.6.0 --mathjax --no-highlight -V highlighting-css=zenburn -V controlsLayout=edges
    ```
   
 6. Open the `index.html` in  browser of your choice. Navigate with the arrow keys.
@@ -118,6 +118,17 @@ The [reveal.js v3.6.0](https://github.com/hakimel/reveal.js/releases/tag/3.6.0) 
 pandoc -t revealjs --template=./custom_pandoc_template/default.revealjs -s -o index.html index.md index_metadata.yaml -V revealjs-url=./reveal.js-3.6.0 -V controlsLayout=edges
 ```
 
+### Mathematical formulas with `MathJax`
+Reveal.js provides [built-in support](https://github.com/hakimel/reveal.js/#mathjax) for the rendering of mathematical formulas using the [MathJax library](https://www.mathjax.org). By default a remote repo of MathJax is utilised for the rendering. In order to enable MathJax support the Pandoc `mathjax` flag has to be included when processing the Markdown source:
+
+```
+pandoc -t revealjs --template=./custom_pandoc_template/default.revealjs -s -o index.html index.md index_metadata.yaml -V revealjs-url=./reveal.js-3.6.0 --mathjax
+```
+
+This repo includes a local (unmodified) copy of MathJax to enable standalone offline presentations. The custom Pandoc template has been modified accordingly in order point to the local copy of MathJax and sets `TeX-MML-AM_SVG-full` as the default configuration file; the SVG output processor (see MathJax documentation) has been chosen as it seems to work best across different browsers.  
+
+**Note**, the full MathJax library is rather large. If a presentation does not require support for mathematical formulas, it might be prudent to remove it from the presentation repository.
+
 ## Custom slide styles - special cases
 This section summarizes some styles that have been provided in the custom CSS stylesheet for use in individual slides. This is not a comprehensive list, but the template presentation contains examples for all customization. 
 
@@ -182,12 +193,13 @@ Consult the [decktape documentation](https://github.com/astefanutti/decktape) fo
 ## Licenses
 Unless when noted otherwise, the contents of this repository are licensed under a *CC0 1.0* public domain license. Consider attributing by linking to https://github.com/sdaume/rmarkdown-presentation-template. 
 
-This repo utilises and/or includes components from the [reveal.js](https://revealjs.com/), [Pandoc](https://pandoc.org/) and [highlight.js](https://highlightjs.org) frameworks. The following licenses apply:
+This repository utilises and/or includes components from the [reveal.js](https://revealjs.com/), [Pandoc](https://pandoc.org/),  [highlight.js](https://highlightjs.org) and [MathJax](https://www.mathjax.org) frameworks. The following licenses apply:
 
 * **reveal.js** is [released](https://github.com/hakimel/reveal.js) under this [MIT license](https://github.com/hakimel/reveal.js/blob/master/LICENSE).
 * **Pandoc** is [released](https://github.com/jgm/pandoc) under this [GPLv2 license](https://github.com/jgm/pandoc/blob/master/COPYRIGHT)
 * **Pandoc templates** are [released](https://github.com/jgm/pandoc/tree/master/data/templates) under this dual [GPLv2 and BSD3 license](https://github.com/jgm/pandoc/blob/master/data/templates/README.markdown). 
 * **highlight.js** is [released](https://github.com/isagalaev/highlight.js) under this [BSD license](https://github.com/isagalaev/highlight.js/blob/master/LICENSE). **NOTE** that highlight.js [offers customized downloads](https://highlightjs.org/download/) with support for selected languages, the pack chosen for this presentation template includes support for "common" languages as well as `R`, `YAML` and `Tex`.
+* **MathJax** is [released](https://github.com/mathjax/MathJax) under this [Apache 2.0 license](https://github.com/mathjax/MathJax/blob/master/LICENSE). An unmodified local copy of MathJax is utilised in this repository. 
 * **[knitr](https://github.com/yihui/knitr)** and the **[tufte](https://github.com/rstudio/tufte)** packages have been used to generate presentation handouts. The former is released under a GPL2/GPL3 license and the latter under a GPL3 license.
 
 Other credits:

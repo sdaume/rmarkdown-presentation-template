@@ -387,6 +387,24 @@ Slide with Plot
 
 ![](index_files/figure-markdown/pressure-1.png)
 
+Mathematical formulas
+=====================
+
+Rendering mathematical notations
+--------------------------------
+
+By default a local copy of [MathJax](https://www.mathjax.org) is
+included and utilised to support the correct rendering of mathematical
+formulas. A notation included as
+
+``` {.markdown}
+$$\sum_{n=1}^{10} n^2$$
+```
+
+is rendered by MathJax as
+
+`$$\sum_{n=1}^{10} n^2$$`
+
 In the morning
 ==============
 
@@ -463,9 +481,10 @@ created using [RMarkdown](https://rmarkdown.rstudio.com),
 [knitr](https://yihui.name/knitr/), [RStudio](https://www.rstudio.com)
 and [Pandoc](https://pandoc.org/).
 [highlight.js](https://highlightjs.org) provides syntax highlighting for
-code sections. PDF and JPG copies of this presentation were generated
-with [DeckTape](https://github.com/astefanutti/decktape). Please note
-the respective licenses of these tools and libraries.
+code sections. [MathJax](https://www.mathjax.org) supports the rendering
+of mathematical notations. PDF and JPG copies of this presentation were
+generated with [DeckTape](https://github.com/astefanutti/decktape).
+Please note the respective licenses of these tools and libraries.
 
  
 
