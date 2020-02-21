@@ -7,7 +7,6 @@ output:
 ---
 
 
-# README
 This repository provides a template for browser-based presentations that are built from [RMarkdown](https://rmarkdown.rstudio.com) documents and utilizes the [reveal.js](https://revealjs.com) presentation framework for the generated presentation. [Pandoc](http://pandoc.org) is used to built the final presentation. The [highlight.js](https://highlightjs.org) framework is employed to provide syntax highlighting.
 
 Feel free to fork this repo and use it for your own presentations. Don't forget to **credit and observe the licenses of the used tools and libraries** - ideally both in your [README](#licenses) and the presentation itself. 
@@ -55,8 +54,6 @@ Presentations using the **reveal.js** framework and hosted on GitHub pages meet 
 * **index.Rmd** is a [`RMarkdown`](https://rmarkdown.rstudio.com) file representing the presentation source. Consult the RMarkdown documentation for the available markdown syntax.  This file could be named differently, but using `index` allows to share a shorter URL when publishing the presentation via GitHub pages.
 The file contains a minimal `YAML` header to drive the transformation to a  `markdown` file. The specified target `markdown` format is  [full Pandoc markdown](https://rmarkdown.rstudio.com/markdown_document_format.html). 
 
-* **index.md** is the result of *"knitting"* the `Rmd` presentation source to plain `markdown`. Either use the **Knit button** in RStudio or run  `rmarkdown::render("input.Rmd")` from the console. The resulting markdown file can now be transformed into the final reveal.js presentation using Pandoc.
-
 * **index_metadata.yaml** is a [YAML](http://yaml.org) file containing metadata about the presentation itself (title, author, date) as well as metadata affecting the styling and rendering of the presentations (theme, code highlighting, etc). The minimum YAML would be this, because a `title` has to be provided to generate a reveal.js presentation:
 
   ```
@@ -77,6 +74,8 @@ The file contains a minimal `YAML` header to drive the transformation to a  `mar
   transition: none
   ---
   ```
+
+* **index.md** is the result of *"knitting"* the `Rmd` presentation source to plain `markdown`. Either use the **Knit button** in RStudio or run  `rmarkdown::render("input.Rmd")` from the console. The resulting markdown file can now be transformed into the final reveal.js presentation using Pandoc.
 
 When the presentation source has been `knitr`ed to plain markdown, Pandoc has to be run from the command line to generate the final presentation. This command has been tested with Pandoc 2.1.2 and is run relative to the directory where the presentation is located:
 
@@ -153,6 +152,7 @@ This has the added advantage that you can still benefit from descriptive titles,
 
 ## Publishing and sharing
 Publishing steps:
+
 * enable GitHub pages for the presentation
 * create a PDF and include a link in the presentation and README
 * consider publishing the PDF to Speakerdeck and include a link in your README
@@ -208,6 +208,7 @@ This repository utilises and/or includes components from the [reveal.js](https:/
 * **[knitr](https://github.com/yihui/knitr)** and the **[tufte](https://github.com/rstudio/tufte)** packages have been used to generate presentation handouts. The former is released under a GPL2/GPL3 license and the latter under a GPL3 license.
 
 Other credits:
+
 * **DeckTape** has been used to create a PDF copy of this presentation template as well as slide screenshots for the handouts. **DeckTape** is [released](https://github.com/astefanutti/decktape) is released under this [MIT license](https://github.com/astefanutti/decktape/blob/master/LICENSE).
 
 Make sure to credit these libraries and provide references to the applicable licenses when forking this repository.

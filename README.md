@@ -1,31 +1,27 @@
-  - [README](#readme)
-      - [Quick setup of your own
-        presentation](#quick-setup-of-your-own-presentation)
-      - [Background and motivation](#background-and-motivation)
-      - [Basic usage](#basic-usage)
-          - [Artifacts and workflow](#artifacts-and-workflow)
-      - [Advanced options](#advanced-options)
-          - [Customized Pandoc template](#customized-pandoc-template)
-          - [Syntax highlighting in code
-            blocks](#syntax-highlighting-in-code-blocks)
-          - [Custom CSS stylesheet](#custom-css-stylesheet)
-          - [Use `controlsLayout` option](#use-controlslayout-option)
-          - [Mathematical formulas with
-            `MathJax`](#mathematical-formulas-with-mathjax)
-      - [Custom slide styles - special
-        cases](#custom-slide-styles---special-cases)
-          - [Hiding slide titles](#hiding-slide-titles)
-      - [Publishing and sharing](#publishing-and-sharing)
-          - [Publishing via GitHub pages](#publishing-via-github-pages)
-          - [Self-contained
-            presentations](#self-contained-presentations)
-          - [Export to PDF](#export-to-pdf)
-      - [Presentation handouts](#presentation-handouts)
-      - [Known issues](#known-issues)
-      - [Miscellaneous resources](#miscellaneous-resources)
-      - [Licenses](#licenses)
-
-# README
+  - [Quick setup of your own
+    presentation](#quick-setup-of-your-own-presentation)
+  - [Background and motivation](#background-and-motivation)
+  - [Basic usage](#basic-usage)
+      - [Artifacts and workflow](#artifacts-and-workflow)
+  - [Advanced options](#advanced-options)
+      - [Customized Pandoc template](#customized-pandoc-template)
+      - [Syntax highlighting in code
+        blocks](#syntax-highlighting-in-code-blocks)
+      - [Custom CSS stylesheet](#custom-css-stylesheet)
+      - [Use `controlsLayout` option](#use-controlslayout-option)
+      - [Mathematical formulas with
+        `MathJax`](#mathematical-formulas-with-mathjax)
+  - [Custom slide styles - special
+    cases](#custom-slide-styles---special-cases)
+      - [Hiding slide titles](#hiding-slide-titles)
+  - [Publishing and sharing](#publishing-and-sharing)
+      - [Publishing via GitHub pages](#publishing-via-github-pages)
+      - [Self-contained presentations](#self-contained-presentations)
+      - [Export to PDF](#export-to-pdf)
+  - [Presentation handouts](#presentation-handouts)
+  - [Known issues](#known-issues)
+  - [Miscellaneous resources](#miscellaneous-resources)
+  - [Licenses](#licenses)
 
 This repository provides a template for browser-based presentations that
 are built from [RMarkdown](https://rmarkdown.rstudio.com) documents and
@@ -109,12 +105,6 @@ has been chosen over the
     file. The specified target `markdown` format is [full Pandoc
     markdown](https://rmarkdown.rstudio.com/markdown_document_format.html).
 
-  - **index.md** is the result of *“knitting”* the `Rmd` presentation
-    source to plain `markdown`. Either use the **Knit button** in
-    RStudio or run `rmarkdown::render("input.Rmd")` from the console.
-    The resulting markdown file can now be transformed into the final
-    reveal.js presentation using Pandoc.
-
   - **index\_metadata.yaml** is a [YAML](http://yaml.org) file
     containing metadata about the presentation itself (title, author,
     date) as well as metadata affecting the styling and rendering of the
@@ -139,6 +129,12 @@ has been chosen over the
         highlight: zenburn
         transition: none
         ---
+
+  - **index.md** is the result of *“knitting”* the `Rmd` presentation
+    source to plain `markdown`. Either use the **Knit button** in
+    RStudio or run `rmarkdown::render("input.Rmd")` from the console.
+    The resulting markdown file can now be transformed into the final
+    reveal.js presentation using Pandoc.
 
 When the presentation source has been `knitr`ed to plain markdown,
 Pandoc has to be run from the command line to generate the final
@@ -271,12 +267,16 @@ itself.
 
 ## Publishing and sharing
 
-Publishing steps: \* enable GitHub pages for the presentation \* create
-a PDF and include a link in the presentation and README \* consider
-publishing the PDF to Speakerdeck and include a link in your README \*
-consider creating a DOI via Zenodo and create a nice badge to advertise
-that the presentation is citable \* add some nice badges on top of your
-README to highlight the different formats to readers
+Publishing steps:
+
+  - enable GitHub pages for the presentation
+  - create a PDF and include a link in the presentation and README
+  - consider publishing the PDF to Speakerdeck and include a link in
+    your README
+  - consider creating a DOI via Zenodo and create a nice badge to
+    advertise that the presentation is citable
+  - add some nice badges on top of your README to highlight the
+    different formats to readers
 
 ### Publishing via GitHub pages
 
@@ -368,12 +368,13 @@ apply:
     used to generate presentation handouts. The former is released under
     a GPL2/GPL3 license and the latter under a GPL3 license.
 
-Other credits: \* **DeckTape** has been used to create a PDF copy of
-this presentation template as well as slide screenshots for the
-handouts. **DeckTape** is
-[released](https://github.com/astefanutti/decktape) is released under
-this [MIT
-license](https://github.com/astefanutti/decktape/blob/master/LICENSE).
+Other credits:
+
+  - **DeckTape** has been used to create a PDF copy of this presentation
+    template as well as slide screenshots for the handouts. **DeckTape**
+    is [released](https://github.com/astefanutti/decktape) is released
+    under this [MIT
+    license](https://github.com/astefanutti/decktape/blob/master/LICENSE).
 
 Make sure to credit these libraries and provide references to the
 applicable licenses when forking this repository.
