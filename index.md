@@ -100,8 +100,32 @@ information (without a logo)
 :::
 :::
 
+Heading levels: `#` vs `##`
+===========================
+
+Level 1 headings (i.e. `#`) do only allow header text!
+======================================================
+
+Additional slide text will only work with level 2 headings (i.e. `##`)
+======================================================================
+
+Like this one
+-------------
+
+-   which also opens up
+-   another navigation level
+
+Pressing the `Esc` key
+----------------------
+
+-   zooms out of the current presentation
+-   and illustrates how level 1 and 2 headings structure a presentation
+
 Presenter mode
---------------
+==============
+
+reveal.js supports speaker notes in presenter mode
+--------------------------------------------------
 
 Speaker notes can be added like this to any section:
 
@@ -116,11 +140,13 @@ Speaker notes can be added like this to any section:
 Press `S` to bring up a window in presenter mode.
 
 <aside class="notes">
+
 -   These are some *presenter notes*.
 -   You can use `markdown` in those notes as well.
 -   Courtesy of the [reveal.js](https://revealjs.com/) framework.
 
 </aside>
+
 Slide-specific customizations
 =============================
 
@@ -272,11 +298,11 @@ CSS class definition.
 Blockquotes {#blockquotes .quoteslide .hideslideheader data-background="#222"}
 -----------
 
-> "Reveal.js has support for nicely styled blockquotes. You just use the
-> standard markdown syntax (i.e. lines preceded by '\> ') to add them.
-> This slide uses a custom style (`.quoteslide`) to change the font and
-> alignment for quotes as well as provide a different styling and
-> alignment for the paragraph below the quote, which is assumed to
+> \"Reveal.js has support for nicely styled blockquotes. You just use
+> the standard markdown syntax (i.e. lines preceded by '\> ') to add
+> them. This slide uses a custom style (`.quoteslide`) to change the
+> font and alignment for quotes as well as provide a different styling
+> and alignment for the paragraph below the quote, which is assumed to
 > contain a quote attribution.
 >
 > This has been combined with a hidden header and a different
@@ -405,36 +431,6 @@ is rendered by MathJax as
 
 `$$\sum_{n=1}^{10} n^2$$`
 
-In the morning
-==============
-
-Getting up {#getting-up .left-aligned-slide}
-----------
-
--   Turn **off** alarm
--   Get out of bed
-
-Breakfast {#breakfast style="text-align: left;"}
----------
-
--   Eat eggs
--   Drink coffee
-
-In the evening
-==============
-
-Dinner {#leftalignsection}
-------
-
--   Eat spaghetti
--   Drink wine
-
-Going to sleep
---------------
-
--   Get in bed
--   Count sheep
-
 Thank You!
 ==========
 
@@ -463,7 +459,7 @@ This presentation can be cited using: *doi:...*
 <https://sdaume.github.io/rmarkdown-presentation-template>
 
 **Presentation Handouts:**
-[https://sdaume.github.io/rmarkdown-presentation-template\\handouts](https://sdaume.github.io/rmarkdown-presentation-template\handouts)
+[https://sdaume.github.io/rmarkdown-presentation-template\\handouts](https://sdaume.github.io/rmarkdown-presentation-template\handouts){.uri}
 
 **Presentation Source:**
 <https://github.com/sdaume/rmarkdown-presentation-template>

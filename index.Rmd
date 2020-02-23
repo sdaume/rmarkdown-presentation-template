@@ -116,8 +116,26 @@ knitr::opts_chunk$set(echo = FALSE)
 </div>
 
 
+# Heading levels: `#` vs `##`
 
-## Presenter mode
+# Level 1 headings (i.e. `#`) do only allow header text!
+
+# Additional slide text will only work with level 2 headings (i.e. `##`)
+
+## Like this one
+
+- which also opens up 
+- another navigation level
+
+## Pressing the `Esc` key  
+
+- zooms out of the current presentation
+- and illustrates how level 1 and 2 headings structure a presentation
+
+
+# Presenter mode
+
+## reveal.js supports speaker notes in presenter mode
 Speaker notes can be added like this to any section:
 
 ```markup
@@ -380,29 +398,6 @@ is rendered by MathJax as
 
 `$$\sum_{n=1}^{10} n^2$$`
 
-# In the morning
-
-## Getting up {.left-aligned-slide}
-
-- Turn **off** alarm
-- Get out of bed
-
-## Breakfast {style="text-align: left;"}
-
-- Eat eggs
-- Drink coffee
-
-# In the evening
-
-## Dinner {#leftalignsection}
-
-- Eat spaghetti
-- Drink wine
-
-## Going to sleep
-
-- Get in bed
-- Count sheep
 
 # Thank You!
 
