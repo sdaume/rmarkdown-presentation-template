@@ -330,11 +330,6 @@ configuration options.
 
 ## Licenses
 
-Unless when noted otherwise, the contents of this repository are
-licensed under a *CC0 1.0* public domain license. Consider attributing
-by linking to
-<https://github.com/sdaume/rmarkdown-presentation-template>.
-
 This repository utilises and/or includes components from the
 [reveal.js](https://revealjs.com/), [Pandoc](https://pandoc.org/),
 [highlight.js](https://highlightjs.org) and
@@ -376,5 +371,8 @@ Other credits:
     under this [MIT
     license](https://github.com/astefanutti/decktape/blob/master/LICENSE).
 
-Make sure to credit these libraries and provide references to the
-applicable licenses when forking this repository.
+**Make sure to credit these libraries and provide references to the
+applicable licenses when forking this repository.**
+
+All other contents in this repository that have been authored by me are
+licensed under *[CC BY](https://creativecommons.org/licenses/by/4.0/)*.
